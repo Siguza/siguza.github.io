@@ -43,6 +43,7 @@ Also it is worth mentioning another feature that was present in past chips alrea
 -   "IORVBAR"  
     A piece of MMIO holding one field for every CPU, designating the physical address at which it will start executing on "reset" (basically when waking from sleep). This too has a locking mechanism, which is activated by writing to it a value that as its least significant bit set to 1.  
     On A9 CPUs and earlier this was set to a physical address inside TrustZone, where WatchTower (KPP) resides. Since A10, this is set to `LowResetVectorBase` as found in XNU, which iBoot calculates from the kernel's entry point as outlined by this comment:
+    
     ```c
     /*
      * __start trampoline is located at a position relative to LowResetVectorBase

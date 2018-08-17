@@ -104,7 +104,7 @@ So let's examine how iOS implements all of the above:
 
 
     /*
-    *	Start the user bootstrap.
+    * Start the user bootstrap.
     */
     bsd_init();
     ```
@@ -112,24 +112,24 @@ So let's examine how iOS implements all of the above:
     ```c
     void rorgn_stash_range(void)
     {
-    	/* Get the AMC values, and stash them into rorgn_begin, rorgn_end. */
+        /* Get the AMC values, and stash them into rorgn_begin, rorgn_end. */
 
-    	uint64_t soc_base = 0;
-    	DTEntry entryP = NULL;
-    	uintptr_t *reg_prop = NULL;
-    	uint32_t prop_size = 0;
-    	int rc;
+        uint64_t soc_base = 0;
+        DTEntry entryP = NULL;
+        uintptr_t *reg_prop = NULL;
+        uint32_t prop_size = 0;
+        int rc;
 
-    	soc_base = pe_arm_get_soc_base_phys();
-    	rc = DTFindEntry("name", "mcc", &entryP);
-    	assert(rc == kSuccess);
-    	rc = DTGetProperty(entryP, "reg", (void **)&reg_prop, &prop_size);
-    	assert(rc == kSuccess);
-    	amcc_base = ml_io_map(soc_base + *reg_prop, *(reg_prop + 1));
+        soc_base = pe_arm_get_soc_base_phys();
+        rc = DTFindEntry("name", "mcc", &entryP);
+        assert(rc == kSuccess);
+        rc = DTGetProperty(entryP, "reg", (void **)&reg_prop, &prop_size);
+        assert(rc == kSuccess);
+        amcc_base = ml_io_map(soc_base + *reg_prop, *(reg_prop + 1));
 
-    	assert(rRORGNENDADDR > rRORGNBASEADDR);
-    	rorgn_begin = (rRORGNBASEADDR << ARM_PGSHIFT) + gPhysBase;
-    	rorgn_end   = (rRORGNENDADDR << ARM_PGSHIFT) + gPhysBase;
+        assert(rRORGNENDADDR > rRORGNBASEADDR);
+        rorgn_begin = (rRORGNBASEADDR << ARM_PGSHIFT) + gPhysBase;
+        rorgn_end   = (rRORGNENDADDR << ARM_PGSHIFT) + gPhysBase;
     }
     ```
     Next, `arm_vm_prot_finalize` patches page tables for the main kernel binary one last time before they become readonly, removing the writeable flag from all const and code regions.  
@@ -233,7 +233,7 @@ So let's examine how iOS implements all of the above:
         // Preserve x0 for start_first_cpu, if called
 
         // Unlock the core for debugging
-        msr		OSLAR_EL1, xzr
+        msr     OSLAR_EL1, xzr
 
         /*
          * Set KTRR registers immediately after wake/resume
@@ -245,25 +245,25 @@ So let's examine how iOS implements all of the above:
          */
 
         // load stashed rorgn_begin
-        adrp	x17, EXT(rorgn_begin)@page
-        add		x17, x17, EXT(rorgn_begin)@pageoff
-        ldr		x17, [x17]
+        adrp    x17, EXT(rorgn_begin)@page
+        add     x17, x17, EXT(rorgn_begin)@pageoff
+        ldr     x17, [x17]
         // if rorgn_begin is zero, we're debugging. skip enabling ktrr
-        cbz		x17, 1f
+        cbz     x17, 1f
 
         // load stashed rorgn_end
-        adrp	x19, EXT(rorgn_end)@page
-        add		x19, x19, EXT(rorgn_end)@pageoff
-        ldr		x19, [x19]
-        cbz		x19, 1f
+        adrp    x19, EXT(rorgn_end)@page
+        add     x19, x19, EXT(rorgn_end)@pageoff
+        ldr     x19, [x19]
+        cbz     x19, 1f
 
         // program and lock down KTRR
         // subtract one page from rorgn_end to make pinst insns NX
-        msr		ARM64_REG_KTRR_LOWER_EL1, x17
-        sub		x19, x19, #(1 << (ARM_PTE_SHIFT-12)), lsl #12 
-        msr		ARM64_REG_KTRR_UPPER_EL1, x19
-        mov		x17, #1
-        msr		ARM64_REG_KTRR_LOCK_EL1, x17
+        msr     ARM64_REG_KTRR_LOWER_EL1, x17
+        sub     x19, x19, #(1 << (ARM_PTE_SHIFT-12)), lsl #12 
+        msr     ARM64_REG_KTRR_UPPER_EL1, x19
+        mov     x17, #1
+        msr     ARM64_REG_KTRR_LOCK_EL1, x17
     ```
     There's not even as much as a conditional branch here, nor any access to memory outside the RoRgn.
 

@@ -294,7 +294,7 @@ Going through our list of 0-7 again, let's reason about what could be done on wh
 1.  (Disable protections)  
     Anyone gaining code execution in iBoot or earlier can trivially just not enable KTRR, and iBoot vulnerabilities probably _do_ exist.
 2.  (Critical data in RoRgn)  
-    The only public KTRR bypass so far, by Luca Todesco, was based on precisely this. XNU has a `BootArgs` struct which, among other things, has a field that hols the physical address of the end of the kernel, which is used to re-initialise `ttbr1_el1` on reset. Prior to iOS 10.2, this struct was not in readonly memory, so it was possibly to cause a different value to be calculated for `ttbr1_el1`.  
+    The only public KTRR bypass so far, by Luca Todesco, was based on precisely this. XNU has a `BootArgs` struct which, among other things, has fields that hold the physical and virtual base addresses of the end kernel, which are used when transitioning from physical to virtual memory (i.e. turning on the MMU). Prior to iOS 10.2, this struct was not in readonly memory, so it was possibly to hijak control flow. This was coupled with the fact that the code that ran on reset did not account for `__LAST.__pinst` and accidentally included it in the executable range.
 3.  (Page tables for RoRgn inside RoRgn)  
     To the best of my knowledge this holds true, so there's no attack against this.
 4.  (`ttbr1_el1` unchangeable)  

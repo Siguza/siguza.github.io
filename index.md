@@ -5,16 +5,16 @@ I plan to have a proper blog some day. Until such time, here goes:
 <hr>
 
 17\. Aug 2018
-## [KTRR](/KTRR/)
+## [KTRR](https://siguza.github.io/KTRR/)
 
 31\. Dec 2017
-## [IOHIDeous](/IOHIDeous/)
+## [IOHIDeous](https://siguza.github.io/IOHIDeous/)
 
 07\. Dec 2017
-## [v0rtex](/v0rtex/)
+## [v0rtex](https://siguza.github.io/v0rtex/)
 
 25\. Dec 2016
-## [tfp0 powered by Pegasus](/cl0ver/)
+## [tfp0 powered by Pegasus](https://siguza.github.io/cl0ver/)
 
 <hr>
 

@@ -19,7 +19,6 @@ I plan to have a proper blog some day. Until such time, here goes:
 
 25\. Dec 2016
 ## [tfp0 powered by Pegasus](https://siguza.github.io/cl0ver/)
-Hacking iOS 9.
 
 <hr>
 

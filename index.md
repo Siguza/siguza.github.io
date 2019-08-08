@@ -9,7 +9,7 @@ I plan to have a proper blog some day. Until such time, here goes:
 
 <hr>
 
-## [The Evolution of iOS Mitigations](https://github.com/ssd-secure-disclosure/typhooncon2019/blob/master/Siguza%20-%20Mitigations.pdf)
+## [The Evolution of iOS Mitigations](https://github.com/ssd-secure-disclosure/typhooncon2019/blob/master/Siguza%20-%20Mitigations.pdf) (TyphoonCon 2019 Slides)
 <sup>13\. Jun 2019</sup>
 
 <hr>

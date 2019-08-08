@@ -4,6 +4,16 @@ I plan to have a proper blog some day. Until such time, here goes:
 
 <hr>
 
+## [APRR](https://siguza.github.io/APRR/)
+<sup>08\. Aug 2019</sup>
+
+<hr>
+
+## [The Evolution of iOS Mitigations](https://github.com/ssd-secure-disclosure/typhooncon2019/blob/master/Siguza%20-%20Mitigations.pdf)
+<sup>13\. Jun 2019</sup>
+
+<hr>
+
 ## [IOKit resymbolication](https://github.com/Siguza/iometa/blob/master/sym/README.md)
 <sup>20\. Apr 2019</sup>
 
@@ -14,7 +24,7 @@ I plan to have a proper blog some day. Until such time, here goes:
 
 <hr>
 
-## [The HIDeous parts of IOKit](https://dl.siguza.net/pdf/2018-Zer0Con.pdf) (Zer0Con Slides)
+## [The HIDeous parts of IOKit](https://dl.siguza.net/pdf/2018-Zer0Con.pdf) (Zer0Con 2018 Slides)
 <sup>29\. Mar 2018</sup>
 
 <hr>

@@ -48,7 +48,7 @@ Let's look at how ARM does it. Here's two exhibits from the [ARMv8 Reference Man
 
 ![AP values][img2]
 
-These entangled `AP` bits are a bit awkward to read, but surprisingly the ARMv7 Manual has a nices breakout available for us:
+These entangled `AP` bits are a bit awkward to read, but surprisingly the ARMv7 Manual has a nicer breakout available for us:
 
 ![Real AP values][img3]
 
@@ -61,7 +61,7 @@ There are a few things to note here:
 The last point is crucial. When you think of `--x` memory in userland, what the system sees is really `r--/--x` memory (in kernel/userland notation).  
 But it's all good, PAN should see that userland has execute permission and prevent the access... ah who am I kidding, we all know it's broken at this point.
 
-Memory access checks, including PAN, are handled by `AArch64.CheckPermission()` as gives in the ARMv8 manual. This is the relevant part, PAN is handled in the last three lines, and I've highlighted the problematic part.
+Memory access checks, including PAN, are handled by `AArch64.CheckPermission()` as given in the ARMv8 manual. This is the relevant part, PAN is handled in the last three lines, and I've highlighted the problematic part.
 
 ![AArch64.CheckPermission pseudocode][img4]
 
@@ -101,6 +101,8 @@ Also I'm not even too sad it got burned now. Because while it was a fun bug, the
 On a separate note, defensive security folks, and Apple in particular, loooooove mitigations. On iOS, Apple has lately been slapping proprietary mitigations around like there's no tomorrow.  
 But thing is, mitigations are often delicate creatures, with rather fragile assumptions. Having too many of them in one place can easily make them break one another, as happened here with execute-only memory vs PAN. And this isn't the first time either, in my blog post about APRR it was ASLR that got broken by another mitigation, and there are a few more cases like this that I know of. As the number of mitigations around specific features increase, I expect collisions like these to become more common. But hey, something has to stay fun, right? :P
 
+As always, feedback is greatly welcome (as is unrelated security chatter :P)! You can [find me on Twitter][twitter] or reach me via email (`*@*.net` where `*` = `siguza`). :)
+
 With that said, I think there's nothing left to do but to wish you all a good one, give a hat tip to the folks who were at 0x41con, and show you the last slide of my deck:
 
 ![Conclusions][img5]
@@ -118,3 +120,4 @@ With that said, I think there's nothing left to do but to wish you all a good on
   [patch]: https://lore.kernel.org/patchwork/patch/706340/
   [aprr]: https://siguza.github.io/APRR/
   [img5]: assets/img/5-conclusions.png
+  [twitter]: https://twitter.com/s1guza/

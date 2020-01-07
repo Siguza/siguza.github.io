@@ -5,7 +5,7 @@ I plan to have a proper blog some day. Until such time, here goes:
 <hr>
 
 ## [PAN](https://siguza.github.io/PAN/)
-<sup>06\. Jan 2020</sup>
+<sup>07\. Jan 2020</sup>
 
 <hr>
 

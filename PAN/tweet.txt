@@ -1,0 +1,42 @@
+Siguza, 23. Oct 2018
+
+What?
+
+PAN in ARMv8.1 is broken:
+Map a page as --x in userland and PAN won't trigger anymore when reading from it in kernel mode.
+Whether this makes the page writeable in kernel mode is OS-specific. I would assume the default to be readonly,
+but for most exploitation cases that is more than enough. :)
+
+Why?
+
+For two reasons:
+1. PAN ignores the UXN bit and only fires if userland has read access (see `AArch64.CheckPermission()` in the ref manual).
+2. There is no way to map memory as non-readable at EL1.
+   Executability is handled separately via a separate bit each, PXN and UXN. But data access is based on only two bits:
+   00 = rw/-- (kernel/user)
+   01 = rw/rw
+   10 = r-/--
+   11 = r-/r-Â
+   So any --x mapping in userland is at least r-- in the kernel.
+One could argue that this is not a bug in the architecture but rather that creating --x mappings is misuse. However:
+- There is no good reason whatsoever for PAN to ignore the UXN bit.
+- That would effectively mean that userland must not be allowed to create --x mappings.
+- ARM engineer did this: https://lore.kernel.org/patchwork/patch/706340/
+
+Who?
+
+iOS/XNU is vulnerable, tried and true.
+Linux allows mapping as --x as well so it *looks* vulnerable, but I wasn't able to test this.
+
+Intel chips use a dedicated bit for *all* userland accessibility, so shouldn't be vulnerable.
+Gotta say, first case I know of where Intel has done something objectively better than ARM.
+
+Fix?
+
+The obvious fix would be to have PAN fault if the UXN bit is not set - as it should have from the beginning.
+But this can be mitigated in software in two ways:
+- Forbid any and all --x mappings, simple as that (goodbye JIT hardening, lol).
+- Switch out TTBR0_EL1 on entering/leaving the kernel, and on copyin/copyout (have fun, aye).
+
+FYI I'm not reporting this, just sitting on it and posting hash to Twitter for street cred. :P
+Here's to a long life, little buggo.

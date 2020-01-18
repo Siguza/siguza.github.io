@@ -1,6 +1,11 @@
-# Siguza's ghetto blog
+# Siguza's Makeshift Blog
 
 I plan to have a proper blog some day. Until such time, here goes:
+
+<hr>
+
+## [cuck00](https://siguza.github.io/cuck00/)
+<sup>18\. Jan 2020</sup>
 
 <hr>
 

@@ -1,4 +1,4 @@
 siguza.github.com
 =================
 
-github subdomain
+Siguza's Blog

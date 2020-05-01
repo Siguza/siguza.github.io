@@ -2,6 +2,9 @@
 
 I plan to have a proper blog some day. Until such time, here goes:
 
+## ["Psychic Paper"](https://siguza.github.io/psychicpaper/)
+<sup>01\. May 2020</sup>
+
 <hr>
 
 ## [cuck00](https://siguza.github.io/cuck00/)

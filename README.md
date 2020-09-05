@@ -1,4 +1,4 @@
-siguza.github.com
-=================
+siguza.github.io
+================
 
-Siguza's Blog
+Siguza's Makeshift Blog

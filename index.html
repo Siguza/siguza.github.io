@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Siguza's Blog</title>
+<link href="assets/css/main.css" rel="stylesheet">
+<style>
+.post {
+    margin: 40px 0;
+}
+.post h2 {
+    margin-bottom: 5px;
+}
+.date {
+    font-size: 0.8em;
+}
+</style>
+<body>
+    <div>
+        <nav class="separator">[ <a href="https://siguza.net">Home</a> | <a href="https://blog.siguza.net">Blog</a> | <a href="https://github.com/Siguza">GitHub</a> | <a href="https://twitter.com/s1guza">Twitter</a> ]</nav>
+        <header>
+            <h1>Siguza's Blog</h1>
+            <p>iOS security, vulnerabilities, exploits, hardware mitigations, reverse engineering, that sort of stuff.</p>
+        </header>
+        <main>
+            <div class="post">
+                <span class="date">01. May 2020</span>
+                <h2><a href="psychicpaper/">"Psychic paper"</a></h2>
+                How to escape the iOS sandbox before your code even runs. Patched in iOS 13.5 beta 3.<br>
+                Post is written in a way that should be understandable even for non-hackers. :)
+            </div>
+            <div class="post">
+                <span class="date">18. Jan 2020</span>
+                <h2><a href="cuck00/">cuck00</a></h2>
+                An all-too-simple XNU kernel info leak that was hiding in plain sight for two decades. Patched in iOS 13.3.1 beta 2.
+            </div>
+            <div class="post">
+                <span class="date">07. Jan 2020</span>
+                <h2><a href="PAN/">PAN</a></h2>
+                A design flaw in the ARMv8 specification.
+            </div>
+            <div class="post">
+                <span class="date">08. Aug 2019</span>
+                <h2><a href="APRR/">APRR</a></h2>
+                Teardown of a hardware memory permission mitigation introduced in Apple's A10/A11 chips.
+            </div>
+            <div class="post">
+                <span class="date">13. Jun 2019</span>
+                <h2><a href="https://raw.githubusercontent.com/ssd-secure-disclosure/typhooncon2019/master/Siguza%20-%20Mitigations.pdf">The Evolution of iOS Mitigations</a> (TyphoonCon 2019 Slides)</h2>
+            </div>
+            <div class="post">
+                <span class="date">20. Apr 2019</span>
+                <h2><a href="https://github.com/Siguza/iometa/blob/master/sym/README.md">IOKit resymbolication</a></h2>
+                How to find a couple dozen thousand C++ symbols for an iOS kernel with minimal effort.
+            </div>
+            <div class="post">
+                <span class="date">17. Aug 2018</span>
+                <h2><a href="KTRR/">KTRR</a></h2>
+                Teardown of a hardware kernel integrity mitigation introduced in Apple's A10 chip.
+            </div>
+            <div class="post">
+                <span class="date">29. Mar 2018</span>
+                <h2><a href="https://dl.siguza.net/pdf/2018-Zer0Con.pdf">The HIDeous parts of IOKit</a> (Zer0Con 2018 Slides)</h2>
+            </div>
+            <div class="post">
+                <span class="date">31. Dec 2017</span>
+                <h2><a href="IOHIDeous/">IOHIDeous</a></h2>
+                A macOS kernel exploit I dropped as an 0day just for the lulz. Patched in macOS High Sierra 10.13.3.
+            </div>
+            <div class="post">
+                <span class="date">07. Dec 2017</span>
+                <h2><a href="v0rtex/">v0rtex</a></h2>
+                The kernel exploit that powers a bunch of iOS 10 jailbreaks.
+            </div>
+            <div class="post">
+                <span class="date">25. Dec 2016</span>
+                <h2><a href="cl0ver/">clover</a></h2>
+                "tfp0 powered by Pegasus": the first binary exploit I ever wrote - gets kernel r/w on iOS 9.
+            </div>
+        </main>
+    </div>
+</body>
+</html>

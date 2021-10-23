@@ -38,8 +38,7 @@ h1, h2 {
 .separator {
     border-bottom: solid 1px #888;
 }
-@media (prefers-color-scheme: light)
-{
+@media (prefers-color-scheme: light) {
     body {
         background-color: #fff;
         color: #24292e;
@@ -48,5 +47,20 @@ h1, h2 {
 @media (min-resolution: 2dppx) {
     .separator {
         border-bottom-width: 0.5px;
+    }
+}
+@media not all and (min-width: 1100px) {
+    body > * {
+        max-width: 825px;
+    }
+}
+@media not all and (min-width: 825px) {
+    body > * {
+        max-width: 550px;
+    }
+}
+@media not all and (min-width: 550px) {
+    body > * {
+        max-width: calc(100vw - 10px);
     }
 }

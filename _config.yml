@@ -1,3 +1,15 @@
-description: "Siguza's Blog"
+title: "Siguza's Blog"
 url: "https://blog.siguza.net"
 baseurl: ""
+
+defaults:
+  -
+    scope:
+      path: "KTRR"
+    values:
+      title: "KTRR"
+  -
+    scope:
+      path: "PAN"
+    values:
+      title: "PAN"

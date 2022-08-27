@@ -6,7 +6,6 @@ a{color:#090}
 a:hover{color:#0c0;text-decoration:none}
 @media (prefers-color-scheme: dark){
     body{background-color:#222;color:#ddd}
-    a{color:#429afc}
     .markdown-body h1{border-bottom:1px solid #666}
     .markdown-body h2{border-bottom:none}
     .markdown-body hr{background-color:#666}

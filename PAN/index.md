@@ -101,7 +101,7 @@ Also I'm not even too sad it got burned now. Because while it was a fun bug, the
 On a separate note, defensive security folks, and Apple in particular, loooooove mitigations. On iOS, Apple has lately been slapping proprietary mitigations around like there's no tomorrow.  
 But thing is, mitigations are often delicate creatures, with rather fragile assumptions. Having too many of them in one place can easily make them break one another, as happened here with execute-only memory vs PAN. And this isn't the first time either, in my blog post about APRR it was ASLR that got broken by another mitigation, and there are a few more cases like this that I know of. As the number of mitigations around specific features increase, I expect collisions like these to become more common. But hey, something has to stay fun, right? :P
 
-As always, feedback is greatly welcome (as is unrelated security chatter :P)! You can [find me on Twitter][twitter] or reach me via email (`*@*.net` where `*` = `siguza`). :)
+As always, feedback is greatly welcome (as is unrelated security chatter :P)! You can [find me on Mastodon][mastodon] or reach me via email (`*@*.net` where `*` = `siguza`). :)
 
 With that said, I think there's nothing left to do but to wish you all a good one, give a hat tip to the folks who were at 0x41con, and show you the last slide of my deck:
 
@@ -111,7 +111,6 @@ With that said, I think there's nothing left to do but to wish you all a good on
   [lailo]: https://twitter.com/littlelailo/
   [sparkey]: https://twitter.com/iBSparkes/
   [commit]: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=24cecc37746393432d994c0dbc251fb9ac7c5d72
-  [tweet]: https://twitter.com/s1guza/status/1054785195239452673
   [manual]: https://developer.arm.com/docs/ddi0487/latest
   [img1]: assets/img/1-ttebits.png
   [img2]: assets/img/2-access.png
@@ -120,4 +119,4 @@ With that said, I think there's nothing left to do but to wish you all a good on
   [patch]: https://lore.kernel.org/patchwork/patch/706340/
   [aprr]: https://siguza.github.io/APRR/
   [img5]: assets/img/5-conclusions.png
-  [twitter]: https://twitter.com/s1guza/
+  [mastodon]: https://mastodon.social/@siguza

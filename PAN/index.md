@@ -119,4 +119,4 @@ With that said, I think there's nothing left to do but to wish you all a good on
   [patch]: https://lore.kernel.org/patchwork/patch/706340/
   [aprr]: https://siguza.github.io/APRR/
   [img5]: assets/img/5-conclusions.png
-  [mastodon]: https://mastodon.social/@siguza
+  [mastodon]: https://infosec.space/@siguza

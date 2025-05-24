@@ -20,84 +20,84 @@
         <title>tachy0n</title>
         <link>https://blog.siguza.net/tachy0n/</link>
         <description>iOS kernel exploit for 13.0-13.5 that was dropped as an 0day in unc0ver v5.0.</description>
-        <guid>tachy0n</guid>
+        <guid isPermaLink="false">tachy0n</guid>
         <pubDate>Fri, 23 May 2025 23:35:27 +0200</pubDate>
     </item>
     <item>
         <title>"Psychic paper"</title>
         <link>https://blog.siguza.net/psychicpaper/</link>
         <description>How to escape the iOS sandbox before your code even runs. Patched in iOS 13.5 beta 3.</description>
-        <guid>psychicpaper</guid>
+        <guid isPermaLink="false">psychicpaper</guid>
         <pubDate>Fri, 1 May 2020 10:15:02 +0200</pubDate>
     </item>
     <item>
         <title>cuck00</title>
         <link>https://blog.siguza.net/cuck00/</link>
         <description>An all-too-simple XNU kernel info leak that was hiding in plain sight for two decades. Patched in iOS 13.3.1 beta 2.</description>
-        <guid>cuck00</guid>
+        <guid isPermaLink="false">cuck00</guid>
         <pubDate>Sat, 18 Jan 2020 03:48:00 +0100</pubDate>
     </item>
     <item>
         <title>PAN</title>
         <link>https://blog.siguza.net/PAN/</link>
         <description>A design flaw in the ARMv8 specification.</description>
-        <guid>PAN</guid>
+        <guid isPermaLink="false">PAN</guid>
         <pubDate>Tue, 7 Jan 2020 02:27:50 +0100</pubDate>
     </item>
     <item>
         <title>APRR</title>
         <link>https://blog.siguza.net/APRR/</link>
         <description>Teardown of a hardware memory permission mitigation introduced in Apple's A10/A11 chips.</description>
-        <guid>APRR</guid>
+        <guid isPermaLink="false">APRR</guid>
         <pubDate>Thu, 8 Aug 2019 13:20:49 +0200</pubDate>
     </item>
     <item>
         <title>The Evolution of iOS Mitigations</title>
         <link>https://raw.githubusercontent.com/ssd-secure-disclosure/typhooncon2019/master/Siguza%20-%20Mitigations.pdf</link>
         <description>TyphoonCon 2019 Slides</description>
-        <guid>TyphoonCon2019</guid>
+        <guid isPermaLink="false">TyphoonCon2019</guid>
         <pubDate>Thu, 13 Jun 2019 11:15:00 +0900</pubDate>
     </item>
     <item>
         <title>IOKit resymbolication</title>
         <link>https://github.com/Siguza/iometa/blob/master/sym/README.md</link>
         <description>How to find a couple dozen thousand C++ symbols for an iOS kernel with minimal effort.</description>
-        <guid>symbols</guid>
+        <guid isPermaLink="false">symbols</guid>
         <pubDate>Sat, 20 Apr 2019 07:37:19 +0200</pubDate>
     </item>
     <item>
         <title>KTRR</title>
         <link>https://blog.siguza.net/KTRR/</link>
         <description>Teardown of a hardware kernel integrity mitigation introduced in Apple's A10 chip.</description>
-        <guid>KTRR</guid>
+        <guid isPermaLink="false">KTRR</guid>
         <pubDate>Fri, 17 Aug 2018 07:38:11 +0200</pubDate>
     </item>
     <item>
         <title>The HIDeous parts of IOKit</title>
         <link>https://dl.siguza.net/pdf/2018-Zer0Con.pdf</link>
         <description>Zer0Con 2018 Slides</description>
-        <guid>Zer0Con2018</guid>
+        <guid isPermaLink="false">Zer0Con2018</guid>
         <pubDate>Thu, 29 Mar 2018 16:00:00 +0900</pubDate>
     </item>
     <item>
         <title>IOHIDeous</title>
         <link>https://blog.siguza.net/IOHIDeous/</link>
         <description>A macOS kernel exploit I dropped as an 0day just for the lulz. Patched in macOS High Sierra 10.13.3.</description>
-        <guid>IOHIDeous</guid>
+        <guid isPermaLink="false">IOHIDeous</guid>
         <pubDate>Sun, 31 Dec 2017 23:56:04 +0100</pubDate>
     </item>
     <item>
         <title>v0rtex</title>
         <link>https://blog.siguza.net/v0rtex/</link>
         <description>The kernel exploit that powers a bunch of iOS 10 jailbreaks.</description>
-        <guid>v0rtex</guid>
+        <guid isPermaLink="false">v0rtex</guid>
         <pubDate>Thu, 7 Dec 2017 16:42:51 +0100</pubDate>
     </item>
     <item>
         <title>cl0ver</title>
         <link>https://blog.siguza.net/cl0ver/</link>
         <description>"tfp0 powered by Pegasus": the first binary exploit I ever wrote - gets kernel r/w on iOS 9.</description>
-        <guid>cl0ver</guid>
+        <guid isPermaLink="false">cl0ver</guid>
         <pubDate>Sun, 25 Dec 2016 06:21:25 +0100</pubDate>
     </item>
 </channel>

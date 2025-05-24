@@ -179,7 +179,7 @@ _ranges.v64->address = (mach_vm_address_t) _buffer;
 _ranges.v64->length  = _capacity;
 ```
 
-Now all we need is a place in the kernel where we can allocate an `IOBufferMemoryDescriptor` at will and also get it mapped into our address space. One convenient place for this is the AGX interface, aka. `IOAcceleratorFamily2` (note that this has since been refactored into `IOGPUFamily` in iOS 14, so the details here only appliy to 13.x and older).  
+Now all we need is a place in the kernel where we can allocate an `IOBufferMemoryDescriptor` at will and also get it mapped into our address space. One convenient place for this is the AGX interface, aka. `IOAcceleratorFamily2` (note that this has since been refactored into `IOGPUFamily` in iOS 14, so the details here only apply to 13.x and older).  
 If we open a userclient of type 0 on `IOGraphicsAccelerator2`, it will give us an `IOAccelContext2`, which lets us map three different memory descriptors via `::clientMemoryForType()`. I don't know what any of them are actually for, but types 1 and 2 have a default size of 0x4000 bytes, while type 0 has a size of 0x8000 bytes. Since we'd like to be able to uniquely identify the victim descriptor, the 0x8000 one is the one to go with here. (And we're gonna need two pages of memory anyway for later stages of the exploit, so that's convenient.) Before we can map it, however, we first need to initialise our userclient some more. We do that by opening another userclient on `IOGraphicsAccelerator2` (type 2, `IOAccelSharedUserClient2`) and passing it to the first userclient via `::connectClient()`. This will actually allocate our `IOBufferMemoryDescriptor` already, so we do the following in a loop:
 
 1. Open an `IOAccelContext2`.
